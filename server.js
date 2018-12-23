@@ -113,7 +113,7 @@ function crawlPage(url , host ){
       var urls = $('a');
       var count = 0 ;
       
-      for (url in urls) {
+      for (url in urls) { // Use Promise.all upon iteration
         var myurl = urls[url];
         if(!util.isNullOrUndefined(myurl) ||util.isNullOrUndefined(myurl.attribs)){
           if(myurl.attribs && !util.isNullOrUndefined(myurl.attribs.href) ){
